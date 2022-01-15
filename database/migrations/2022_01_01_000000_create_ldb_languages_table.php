@@ -40,10 +40,10 @@ class CreateLdbLanguagesTable extends Migration
     public function down()
     {
         Schema::table('ldb_languages', function (Blueprint $table) {
-            $table->dropIndex('ldb_languages_639_1_index');
-            $table->dropIndex('ldb_languages_639_2t_index');
-            $table->dropIndex('ldb_languages_639_2b_index');
-            $table->dropIndex('ldb_languages_639_3_index');
+            $table->dropIndex('ldb_languages_code_639_1_index');
+            $table->dropIndex('ldb_languages_code_639_2t_index');
+            $table->dropIndex('ldb_languages_code_639_2b_index');
+            $table->dropIndex('ldb_languages_code_639_3_index');
         });
         Schema::dropIfExists('tbs_tab_geographic_partition');
     }
