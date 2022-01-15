@@ -1,0 +1,37 @@
+{
+    "name": "lbreda/laravel-langdb",
+    "description": "Language database for Laravel",
+    "type": "library",
+    "require": {
+        "php":"^8.0",
+        "illuminate/support": "^8.79",
+        "illuminate/database": "^8.79",
+        "illuminate/console": "^8.79"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Lorenzo Breda",
+            "email": "lorenzo@lbreda.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LBreda\\LaravelLangDb\\LaravelLangDBProvider"
+            ]
+        },
+        "aliases": {
+            "Config": "Illuminate\\Support\\Facades\\Config",
+            "Http": "Illuminate\\Support\\Facades\\Http"
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "LBreda\\LaravelLangDb\\": "src/"
+        }
+    }
+}
