@@ -9,7 +9,11 @@ You can install the package via composer:
 
     composer require lbreda/laravel-langdb
 
-Then you need to refresh the language database using the command
+Then you have to migrate:
+
+    php artisan migrate
+
+After migrating, you need to refresh the language database using the command
 
     php artisan lbreda:refresh-lang-db
 
