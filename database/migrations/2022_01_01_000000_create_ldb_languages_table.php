@@ -24,10 +24,10 @@ class CreateLdbLanguagesTable extends Migration
                 $table->timestamps();
             });
             Schema::table('ldb_languages', function (Blueprint $table) {
-                $table->index('639_1');
-                $table->index('639_2t');
-                $table->index('639_2b');
-                $table->index('639_3');
+                $table->index('code_639_1');
+                $table->index('code_639_2t');
+                $table->index('code_639_2b');
+                $table->index('code_639_3');
             });
         }
     }
