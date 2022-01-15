@@ -43,16 +43,16 @@ class RefreshLangDB extends Command
         foreach (self::$languages as $language) {
             DB::table('ldb_languages')->updateOrInsert(
                 [
-                    'native_name' => $language->native_name,
+                    'native_name' => $language['native_name'],
                 ],
                 [
-                    'code_639_1'  => $language->code_639_1,
-                    'code_639_2t' => $language->code_639_2t,
-                    'code_639_2b' => $language->code_639_2b,
-                    'code_639_3'  => $language->code_639_3,
-                    'created_at'  => $language->created_at,
+                    'code_639_1'  => $language['code_639_1'],
+                    'code_639_2t' => $language['code_639_2t'],
+                    'code_639_2b' => $language['code_639_2b'],
+                    'code_639_3'  => $language['code_639_3'],
+                    'created_at'  => $language['created_at'],
                     'updated_at'  => date('Y-m-d h:i:s'),
-                    'deleted_at'  => $language->deleted_at,
+                    'deleted_at'  => $language['deleted_at'],
                 ]
             );
         }
@@ -63,7 +63,7 @@ class RefreshLangDB extends Command
         return 0;
     }
 
-    private static object $languages = (object)[
+    private static array $languages = [
         [
             'code_639_1'  => 'ab',
             'code_639_2t' => 'abk',
