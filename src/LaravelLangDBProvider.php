@@ -1,6 +1,6 @@
 <?php
 
-namespace LBreda\LaravelLangDb\Models;
+namespace LBreda\LaravelLangDb;
 
 use Illuminate\Support\ServiceProvider;
 use LBreda\LaravelLangDb\Console\Commands\RefreshLangDB;
